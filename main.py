@@ -22,6 +22,8 @@ def main():
             
         screen.fill((0,0,0))
 
+        player_ship.update(dt)
+
         player_ship.draw(screen)
 
         pygame.display.flip()
