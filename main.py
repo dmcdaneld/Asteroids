@@ -42,6 +42,11 @@ def main():
         for drawable in grp_drawable:
             drawable.draw(screen)
 
+        for asteroid in grp_asteroids:
+            if asteroid.collision_chk(player_ship):
+                print("Game Over!")
+                raise SystemExit
+
         pygame.display.flip()
         
         dt = clock.tick(60)/1000  # pause for 60 ms and return the delta time in sec since last call
