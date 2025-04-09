@@ -50,6 +50,10 @@ def main():
             if asteroid.collision_chk(player_ship):
                 print("Game Over!")
                 raise SystemExit
+            for bullet in grp_shots:
+                if asteroid.collision_chk(bullet):
+                    asteroid.kill()
+                    bullet.kill()
 
         pygame.display.flip()
         
