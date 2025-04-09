@@ -41,6 +41,7 @@ def main():
         screen.fill((0,0,0))
 
         grp_updatable.update(dt)
+        player_ship.shoot_cooldown -= dt
 
         for drawable in grp_drawable:
             drawable.draw(screen)
