@@ -52,7 +52,7 @@ def main():
                 raise SystemExit
             for bullet in grp_shots:
                 if asteroid.collision_chk(bullet):
-                    asteroid.kill()
+                    asteroid.split()
                     bullet.kill()
 
         pygame.display.flip()
